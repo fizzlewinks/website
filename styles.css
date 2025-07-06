@@ -109,12 +109,14 @@ footer {
 }
 
 /* Responsive tweaks */
-@media (max-width: 1000px) {
-  nav ul {
-    gap: 1rem;
-  }
-
+@media (max-width: 800px) {
   .gallery {
-    grid-template-columns: 1fr;
+    column-count: 2;
   }
 }
+@media (max-width: 500px) {
+  .gallery {
+    column-count: 1;
+  }
+}
+
