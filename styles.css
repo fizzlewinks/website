@@ -50,30 +50,23 @@ nav ul li a:hover {
   color: #fff; /* white on hover/active */
 }
 
-/* Gallery */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
+  column-count: 4;
+  column-gap: 1.2rem;
   padding: 2rem;
 }
 
 .gallery-item {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #333; /* dark gray border */
-  border-radius: 6px;
-  background: #1a1a1a;
-  cursor: pointer;
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
 }
 
 .gallery-item img {
-  display: block;
   width: 100%;
   height: auto;
-  filter: grayscale(100%) brightness(0.8); /* grayscale and dimmed */
-  transition: filter 0.3s ease;
+  display: block;
 }
+
 
 .gallery-item:hover img {
   filter: grayscale(0%) brightness(1); /* full color on hover */
