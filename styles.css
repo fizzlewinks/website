@@ -17,18 +17,15 @@ body {
 
 /* Navbar */
 nav {
-  background: #1e1e1e;  /* darker than body but still dark */
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #333;
+  background: #121212;  /* darker than body but still dark */
+
+  text-align: center;
 }
 
 nav .logo {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 3rem;
   color: #e0e0e0;  /* light gray */
 }
 
