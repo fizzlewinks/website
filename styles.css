@@ -15,38 +15,57 @@ body {
   flex-direction: column;
 }
 
-/* Navbar */
-nav {
-  background: #121212;  /* darker than body but still dark */
-
-  text-align: center;
+/* Navigation container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem; /* reduced padding */
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-nav .logo {
+/* Logo */
+.logo {
   font-family: 'Jost', sans-serif;
   font-weight: 700;
-  font-size: 3rem;
-  color: #e0e0e0;  /* light gray */
+  font-size: 2.2rem;
+  color: #e0e0e0;
 }
 
-nav ul {
+/* Nav links styled as text */
+.nav-links {
+  font-family: 'Roboto', sans-serif;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
-nav ul li a {
-  color: #aaa; /* medium gray */
-  text-decoration: none;
-  font-weight: 600;
+.nav-links button {
+  all: unset; /* remove default button styles */
+  cursor: pointer;
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
-  color: #fff; /* white on hover/active */
+.nav-links button:hover,
+.nav-links button.active {
+  color: #fff;
 }
 
+/* Gallery container toggle */
+.gallery-wrapper {
+  display: none;
+}
+
+.gallery-wrapper.active {
+  display: block;
+}
+
+/* Gallery layout */
 .gallery {
   column-count: 4;
   column-gap: 1.2rem;
@@ -64,16 +83,16 @@ nav ul li a:hover {
   display: block;
 }
 
-
+/* Hover effect */
 .gallery-item:hover img {
   filter: grayscale(0%) brightness(1); /* full color on hover */
 }
-
 
 .gallery-item:hover .overlay {
   opacity: 1;
 }
 
+/* Social icons */
 .social-section {
   text-align: center;
   margin: 3rem 0;
@@ -111,9 +130,22 @@ footer {
     column-count: 2;
   }
 }
+
 @media (max-width: 500px) {
   .gallery {
     column-count: 1;
   }
 }
 
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
