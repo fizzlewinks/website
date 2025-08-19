@@ -4,91 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>analogpixels</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
-  
 </head>
-<script>
-  function showGallery(type) {
-    document.getElementById('urban-gallery').classList.remove('active');
-    document.getElementById('car-gallery').classList.remove('active');
-
-    if (type === 'urban') {
-      document.getElementById('urban-gallery').classList.add('active');
-    } else {
-      document.getElementById('car-gallery').classList.add('active');
-    }
-  }
-</script>
-
 <body>
-<nav>
-  <div class="nav-container">
-    <div class="logo">analogpixels</div>
-    <div class="nav-links">
-      <button onclick="showGallery('urban')">Urban</button>
-      <button onclick="showGallery('cars')">Automotive</button>
+
+  <!-- Navbar (fixed) -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo" onclick="showHome()">analogpixels</a>
+      <div class="nav-links">
+        <button onclick="showGallery('urban')">Urban</button>
+        <button onclick="showGallery('cars')">Automotive</button>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
+  <!-- Hero Section -->
+  <header id="hero">
+    <img src="src/urban/BT54023-R1-032-14A-2.jpg" alt="Hero Image" class="hero-img active">
+  </header>
 
-<main>
-  <!-- Urban Gallery Wrapper -->
-  <div id="urban-gallery" class="gallery-wrapper active">
-    <section class="gallery">
-      <div class="gallery-item"><img src="src/urban/L2040531.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/L2040670.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/L2040703.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/L2100342.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/L2050137.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/DSC00639.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/L2050300.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/L2100276.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/L2100197.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/L2100211.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/L2100322.jpg"></div>
-      <div class="gallery-item"><img src="src/urban/L2100367.jpg"></div>
+  <main>
+    <!-- Urban Gallery -->
+    <div id="urban-gallery" class="gallery-wrapper">
+      <section class="gallery">
+        <div class="gallery-item"><img src="src/urban/DSC05955.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/urban/DSC05967.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/urban/BT54023-R1-066-31A.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/urban/DSC00639.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/urban/L2050137.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/urban/L2050300.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/urban/L2100367.jpg" alt=""></div>
+      </section>
+    </div>
+
+    <!-- Automotive Gallery -->
+    <div id="car-gallery" class="gallery-wrapper">
+      <section class="gallery">
+        <div class="gallery-item"><img src="src/cars/L2060529.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/cars/DSC03563.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/cars/L2090009.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/cars/DSC01911.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/cars/DSC01624.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/cars/DSC03716.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/cars/DSC05183.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/cars/L2060861.jpg" alt=""></div>
+      </section>
+    </div>
+
+    <!-- Social -->
+    <section id="social" class="social-section">
+      <a href="https://instagram.com/bach.webp" target="_blank" rel="noopener noreferrer" class="social-icon">
+        <img src="instagram.png" alt="Instagram" />
+      </a>
     </section>
-  </div>
+  </main>
 
-  <!-- Car Gallery Wrapper -->
-  <div id="car-gallery" class="gallery-wrapper">
-    <section class="gallery">
-      <div class="gallery-item"><img src="src/cars/L2060529.jpg"></div>
-      <div class="gallery-item"><img src="src/cars/L2060861.jpg"></div>
-      <div class="gallery-item"><img src="src/cars/L2090009.jpg"></div>
-    </section>
-  </div>
-
-  <section id="social" class="social-section">
-    <a href="https://instagram.com/bach.webp" target="_blank" rel="noopener noreferrer" class="social-icon">
-      <img src="instagram.png" alt="Instagram" />
-    </a>
-  </section>
-</main>
-
-
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <span>&copy; 2025 Bach Ta. All rights reserved.</span>
     </div>
   </footer>
 
+  <!-- Script to toggle galleries and hero -->
   <script>
     function showGallery(type) {
+      // Hide hero
+      document.getElementById('hero').style.display = 'none';
+
+      // Hide all galleries
       document.getElementById('urban-gallery').classList.remove('active');
       document.getElementById('car-gallery').classList.remove('active');
 
-      if (type === 'urban') {
+      // Show selected gallery
+      if(type === 'urban'){
         document.getElementById('urban-gallery').classList.add('active');
       } else {
         document.getElementById('car-gallery').classList.add('active');
       }
+
+      // Scroll to top
+      window.scrollTo(0, 0);
+    }
+
+    function showHome() {
+      // Hide galleries
+      document.getElementById('urban-gallery').classList.remove('active');
+      document.getElementById('car-gallery').classList.remove('active');
+
+      // Show hero
+      document.getElementById('hero').style.display = 'block';
+
+      // Scroll to top
+      window.scrollTo(0, 0);
     }
   </script>
+
 </body>
 </html>
