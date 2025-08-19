@@ -65,7 +65,7 @@ nav {
 #hero {
   margin-top: 60px; /* space for fixed navbar */
   width: 100%;
-  aspect-ratio: 3/2; /* 2:3 ratio */
+  aspect-ratio: 16/7; /* 2:3 ratio */
   overflow: hidden;
 }
 
@@ -161,4 +161,24 @@ footer {
   .nav-links {
     flex-wrap: wrap;
   }
+}
+
+/* Intro Section */
+.intro {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.intro h1 {
+  font-family: 'Jost', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
 }

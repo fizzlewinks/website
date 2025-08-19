@@ -29,8 +29,17 @@
 
   <!-- Hero Section -->
   <header id="hero">
-    <img src="src/urban/BT54023-R1-032-14A-2.jpg" alt="Hero Image" class="hero-img active">
+    <img src="src\cars\DSC03563-2.jpg" alt="Hero Image" class="hero-img active">
   </header>
+
+<section id="home-intro" class="intro">
+  <div class="intro-container">
+    <h1>About</h1>
+    <p>Hey, I'm Bach - a photographer based in Wellington, New Zealand.<br><br>
+    I love capturing the world around me, from city streets and urban vibes to cars and automotive culture.<br>
+    Take a look around and see what I’ve been shooting lately.</p>
+  </div>
+</section>
 
   <main>
     <!-- Urban Gallery -->
@@ -38,9 +47,12 @@
       <section class="gallery">
         <div class="gallery-item"><img src="src/urban/DSC05955.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/DSC05967.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/urban/BT54023-R1-066-31A.jpg" alt=""></div>
+        
+        <div class="gallery-item"><img src="src/urban/BT54023-R1-034-15A.jpg" alt=""></div>
+        
         <div class="gallery-item"><img src="src/urban/DSC00639.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/L2050137.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/urban/BT54023-R1-066-31A.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/L2050300.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/L2100367.jpg" alt=""></div>
       </section>
@@ -50,7 +62,7 @@
     <div id="car-gallery" class="gallery-wrapper">
       <section class="gallery">
         <div class="gallery-item"><img src="src/cars/L2060529.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/cars/DSC03563.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/cars/L2080889.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/cars/L2090009.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/cars/DSC01911.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/cars/DSC01624.jpg" alt=""></div>
@@ -62,7 +74,7 @@
 
     <!-- Social -->
     <section id="social" class="social-section">
-      <a href="https://instagram.com/bach.webp" target="_blank" rel="noopener noreferrer" class="social-icon">
+      <a href="https://www.instagram.com/analog_pixels/" target="_blank" rel="noopener noreferrer" class="social-icon">
         <img src="instagram.png" alt="Instagram" />
       </a>
     </section>
@@ -77,34 +89,29 @@
 
   <!-- Script to toggle galleries and hero -->
   <script>
-    function showGallery(type) {
-      // Hide hero
-      document.getElementById('hero').style.display = 'none';
-
-      // Hide all galleries
+    function showHome() {
       document.getElementById('urban-gallery').classList.remove('active');
       document.getElementById('car-gallery').classList.remove('active');
 
-      // Show selected gallery
+      document.getElementById('hero').style.display = 'block';
+      document.getElementById('home-intro').style.display = 'block';
+
+      window.scrollTo(0, 0);
+    }
+
+    function showGallery(type) {
+      document.getElementById('hero').style.display = 'none';
+      document.getElementById('home-intro').style.display = 'none';
+
+      document.getElementById('urban-gallery').classList.remove('active');
+      document.getElementById('car-gallery').classList.remove('active');
+
       if(type === 'urban'){
         document.getElementById('urban-gallery').classList.add('active');
       } else {
         document.getElementById('car-gallery').classList.add('active');
       }
 
-      // Scroll to top
-      window.scrollTo(0, 0);
-    }
-
-    function showHome() {
-      // Hide galleries
-      document.getElementById('urban-gallery').classList.remove('active');
-      document.getElementById('car-gallery').classList.remove('active');
-
-      // Show hero
-      document.getElementById('hero').style.display = 'block';
-
-      // Scroll to top
       window.scrollTo(0, 0);
     }
   </script>
