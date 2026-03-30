@@ -5,29 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>analogpixels</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Navbar (fixed) -->
   <nav>
     <div class="nav-container">
       <a href="#" class="logo" onclick="showHome()">analogpixels</a>
       <div class="nav-links">
         <button onclick="showGallery('urban')">Urban</button>
         <button onclick="showGallery('cars')">Automotive</button>
+        <button onclick="showGallery('music')">Music</button>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <header id="hero">
     <img src="src\cars\DSC03563-2.jpg" alt="Hero Image" class="hero-img active">
   </header>
@@ -39,23 +36,23 @@
 </section>
 
   <main>
-    <!-- Urban Gallery -->
     <div id="urban-gallery" class="gallery-wrapper">
       <section class="gallery">
         <div class="gallery-item"><img src="src/urban/DSC05955.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/urban/DSC00778-2.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/BT54023-R1-034-15A.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/DSC00639.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/L2050137.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/L2050300.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/BT79626-R1-058-27A.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/urban/DSC01036-Edit-2.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/DSC08029.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/DSC07064.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/urban/DSC07173.jpg" alt=""></div>
       </section>
     </div>
 
-    <!-- Automotive Gallery -->
-    <div id="car-gallery" class="gallery-wrapper">
+    <div id="cars-gallery" class="gallery-wrapper">
       <section class="gallery">
         <div class="gallery-item"><img src="src/cars/DSC07966.jpg" alt=""></div>
         <div class="gallery-item"><img src="src/cars/L2060529.jpg" alt=""></div>
@@ -71,7 +68,17 @@
       </section>
     </div>
 
-    <!-- Social -->
+    <div id="music-gallery" class="gallery-wrapper">
+      <section class="gallery">
+        <div class="gallery-item"><img src="src/music/DSC02504-Edit.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/music/DSC04224.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/music/DSC04558.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/music/DSC02498-Edit(1).jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/music/DSC01346-Edit.jpg" alt=""></div>
+        <div class="gallery-item"><img src="src/music/DSC04520.jpg" alt=""></div>
+      </section>
+    </div>
+
     <section id="social" class="social-section">
       <a href="https://www.instagram.com/analog_pixels/" target="_blank" rel="noopener noreferrer" class="social-icon">
         <img src="instagram.png" alt="Instagram" />
@@ -79,18 +86,15 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <span>&copy; 2025 Bach Ta. All rights reserved.</span>
+      <span>&copy; 2026 Bach Ta. All rights reserved.</span>
     </div>
   </footer>
 
-  <!-- Script to toggle galleries and hero -->
   <script>
     function showHome() {
-      document.getElementById('urban-gallery').classList.remove('active');
-      document.getElementById('car-gallery').classList.remove('active');
+      document.querySelectorAll('.gallery-wrapper').forEach(el => el.classList.remove('active'));
 
       document.getElementById('hero').style.display = 'block';
       document.getElementById('home-intro').style.display = 'block';
@@ -102,14 +106,10 @@
       document.getElementById('hero').style.display = 'none';
       document.getElementById('home-intro').style.display = 'none';
 
-      document.getElementById('urban-gallery').classList.remove('active');
-      document.getElementById('car-gallery').classList.remove('active');
+      document.querySelectorAll('.gallery-wrapper').forEach(el => el.classList.remove('active'));
 
-      if(type === 'urban'){
-        document.getElementById('urban-gallery').classList.add('active');
-      } else {
-        document.getElementById('car-gallery').classList.add('active');
-      }
+      const el = document.getElementById(type + '-gallery');
+      if(el) el.classList.add('active');
 
       window.scrollTo(0, 0);
     }
