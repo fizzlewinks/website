@@ -1,115 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>analogpixels</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bach Ta</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="navbar" id="navbar">
+            <div class="nav-container">
+            <div class="nav-logo">Bach Ta | Photographer</div>
+            <ul class="nav-menu">
+                <li><a href="#work" class="nav-link">Photos</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="logo" onclick="showHome()">analogpixels</a>
-      <div class="nav-links">
-        <button onclick="showGallery('urban')">Urban</button>
-        <button onclick="showGallery('cars')">Automotive</button>
-        <button onclick="showGallery('music')">Music</button>
-      </div>
-    </div>
-  </nav>
+    <section id="work" class="work">
+        <div class="container">
 
-  <header id="hero">
-    <img src="src/urban/DSC07064.jpg" alt="Hero Image" class="hero-img active">
-  </header>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="src/BT82033-R1-018-7A.jpg">
+                    </div>
+                </div>
 
-<section id="home-intro" class="intro">
-  <div class="intro-container">
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="src/DSC07129.jpg">
+                    </div>
+                </div>
 
-  </div>
-</section>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="src/DSC_1438.jpg">
+                    </div>
+                </div>
 
-  <main>
-    <div id="urban-gallery" class="gallery-wrapper">
-      <section class="gallery">
-        <div class="gallery-item"><img src="src/urban/DSC00778-2.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/urban/DSC04642-positive.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/urban/DSC07173.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/urban/DSC04631-positive.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/urban/BT54023-R1-034-15A.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/urban/DSC01036-Edit-2.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/urban/DSC03741-Edit.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/urban/DSC05955.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/urban/DSC04624-positive.jpg" alt=""></div>
-        
-      </section>
-    </div>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="src/DSC_4150.jpg">
+                    </div>
+                </div>
 
-    <div id="cars-gallery" class="gallery-wrapper">
-      <section class="gallery">
-        <div class="gallery-item"><img src="src/cars/L2060529.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/cars/DSC05183.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/cars/DSC03716.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/cars/L2060861.jpg" alt=""></div>
-      </section>
-    </div>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="src/DSC00507.jpg">
+                    </div>
+                </div>
 
-    <div id="music-gallery" class="gallery-wrapper">
-      <section class="gallery">
-        
-        <div class="gallery-item"><img src="src/music/DSC02504-Edit.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/music/DSC07705.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/music/DSC06535.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/music/DSC07129.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/music/DSC04558.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/music/DSC02498-Edit(1).jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/music/L2120103.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/music/DSC04520.jpg" alt=""></div>
-        <div class="gallery-item"><img src="src/music/L2120237.jpg" alt=""></div>
-      </section>
-    </div>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="src/DSC09927.jpg">
+                    </div>
+                </div>
 
-    <section id="social" class="social-section">
-      <a href="https://www.instagram.com/analog_pixels/" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <img src="instagram.png" alt="Instagram" />
-      </a>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="src/DSC04343.jpg">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="src/DSC_1211.jpg">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="src/DSC07705.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="footer-content">
-      <span>&copy; 2026 Bach Ta. All rights reserved.</span>
-    </div>
-  </footer>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content single-column">
+                <div class="about-text">
+                    <p>
+                        I'm Bach, a photographer based in Wellington, New Zealand, working primarily in documentary and editorial photography.
+                    </p>
+                    <p>
+                        I started out shooting landscapes for fun, but have since found my passion in capturing the stories behind people
+                        and events. I enjoy working across a variety of subjects, including music photography and photojournalism. My work
+                        has been recognised in the NZAPA, including a Silver award in Photojournalism
+                        and the Under 18 category win in 2026.
+                    </p>
+                    <p>
+                        Available for assignments and editorial work - get in touch via email or Instagram for inquiries and collaborations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    function showHome() {
-      document.querySelectorAll('.gallery-wrapper').forEach(el => el.classList.remove('active'));
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:hello@analogpixels.com">hello@analogpixels.com</a></p>
+                    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/analog_pixels/">@analog_pixels</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      document.getElementById('hero').style.display = 'block';
-      document.getElementById('home-intro').style.display = 'block';
-
-      window.scrollTo(0, 0);
-    }
-
-    function showGallery(type) {
-      document.getElementById('hero').style.display = 'none';
-      document.getElementById('home-intro').style.display = 'none';
-
-      document.querySelectorAll('.gallery-wrapper').forEach(el => el.classList.remove('active'));
-
-      const el = document.getElementById(type + '-gallery');
-      if(el) el.classList.add('active');
-
-      window.scrollTo(0, 0);
-    }
-  </script>
-
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bach Ta. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
